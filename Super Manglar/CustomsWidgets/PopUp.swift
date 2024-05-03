@@ -21,8 +21,13 @@ struct CustomPopup: View {
                     .foregroundColor(.white)
                 
                 Text(description)
+                    .font(.title2)
                     .multilineTextAlignment(.center)
+                    .lineLimit(5)
+                    .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.white)
+                    
+                
                 
                 Button(action: {
                     self.isPresented = false
@@ -30,14 +35,16 @@ struct CustomPopup: View {
                     Text("Cerrar")
                         .foregroundColor(.white)
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.green)
                         .cornerRadius(8)
                 }
             }
             .padding()
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.black.opacity(0.7).edgesIgnoringSafeArea(.all))
+        .frame(maxWidth: 800, maxHeight: 1000)
+        .background(Color.black.opacity(0.5).edgesIgnoringSafeArea(.all))
+        .cornerRadius(20)
+        .padding()
     }
 }
 
